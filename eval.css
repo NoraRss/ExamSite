@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+body {
+    margin : 0 auto;
+    color : #fff;
+    background-size: cover; /* Assure que l'image couvre toute la page */
+    height: 100vh;  /* Assure que la hauteur prend toute la fenêtre */
+    overflow: hidden; /* Empêche le défilement */
+}
+
+header h1 {
+    display: inline-block; /* Garde l'élément logo aligné à gauche */
+}
+.logo-container img {
+    width: 90px; /* Ajuste la largeur selon ton besoin */
+    height: auto; /* Garde les proportions */
+    margin-left: 125px; /* Ajuste la valeur selon ton besoin */
+    margin-top: 20px;
+}
+
+
+header nav {
+    display: inline-block; /* Garde les éléments du menu alignés à droite */
+    float:right; /* Fait flotter le menu à droite */
+    margin-top: -30px; /* Déplace légèrement le menu vers le haut */
+    position: relative; /* Permet de décaler l'élément sans affecter le flux normal */
+    right: 120px; /* Déplace le menu vers la gauche */
+}
+
+
+header nav a {
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none; /* Enlève le soulignement */
+    color: #fff; /* Texte blanc */
+    font-size: 12px; /* Ajuste la taille du texte à ton goût */
+    padding: 0 20px; /* Espacement autour du texte (si nécessaire) */
+    cursor: pointer; /* Ajoute un curseur pointer pour l'interaction */
+    margin-left: -15px; /* Déplace le texte légèrement vers la gauche */
+}
+
+header nav a:hover {
+    color:  #c1b086 /* Change la couleur au survol si nécessaire */
+}
+#banner {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height:600px;
+    padding-top: 81px;
+    position: relative; /* Nécessaire pour positionner le ::after par rapport à cet élément */
+    overflow: hidden; /* Cache tout ce qui dépasse */
+}
+#banner h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 55px;
+    color: white; /* Rendre le texte blanc */
+    padding: 0; /* Supprimer le padding */
+    background: none; /* Supprimer le fond */
+    border: none; /* Supprimer la bordure */
+    text-align: left; /* Aligne le texte à gauche */
+    font-weight: normal; /* Force la police à être non-gras */
+    margin-left: 190px; /* Décale le titre légèrement à gauche */
+    position: relative; /* Nécessaire pour positionner le ::after par rapport à cet élément */
+    z-index: 1; /* Placer le titre au-dessus du H */
+}
+
+#banner p {
+    font-family: 'Roboto Slab', serif !important;
+    font-weight: normal; /* Assurer que le H n'est pas en gras */
+    font-size: 11.4px;
+    width:  46.3%;
+    line-height: 20px;
+    color: #fff;
+    margin-left:225px; /* Décale le titre légèrement à gauche */
+    margin-top: -4px; /* Décale l'écriture vers le haut */  
+    position: relative; /* Nécessaire pour positionner le ::after par rapport à cet élément */ 
+    z-index: 1; /* Placer le titre au-dessus du H */
+    text-align: justify; /* Justifier le texte */
+}
+
+#banner::after {
+    content: 'H'; /* Le contenu du pseudo-élément : un grand H */
+    font-family: 'Roboto Slab', serif;
+    font-size: 306px; /* Taille du H */
+    color: rgba(255, 255, 255, 0.2); /* Couleur avec un peu de transparence */
+    position: absolute;
+    top: 26.4%; /* Centrer le H à l'intérieur de la section */
+    left: 24.35%;
+    transform: translate(-50%, -50%); /* Centrer parfaitement le H */
+    z-index: -1; /* Placer le H derrière le texte */
+    font-weight: bold; /* Assurer que le H n'est pas en gras */
+}
+
+
+
+
+
+
+
+
+#about body {
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Fond blanc */
+    color: black;
+    font-family: 'Roboto Slab', serif;
+}
+
+#about content {
+    display: flex;
+    flex-direction: row; /* Images à gauche, texte à droite */
+    align-items: center; /* Alignement vertical */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 50px; /* Espacement entre images et texte */
+    padding: 50px;
+}
+
+#about image-container {
+    position: relative; /* Permet le positionnement absolu des enfants */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacement entre les images */
+    padding: 20px;
+    height: 60vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+/* Encadré avec coins arrondis et bordure dorée */
+#about .image-box {
+    position: relative;
+    width: 220px; /* Largeur fixe pour les images */
+    height: 320px; /* Hauteur fixe pour le premier box (portrait) */
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #c1b086; /* Bordure dorée */
+
+    top: 46px; /* Ajuste la position verticale */
+    left: -80px; /* Décale légèrement à gauche */
+    box-shadow: 4px 4px 4px black; /* Effet d'ombre pour mieux ressortir */
+}
+
+
+
+#about .image-box,
+#box2 {
+    transition: transform 0.3s ease-in-out; /* Animation fluide pour zoom ET dézoom */
+}
+
+#about .image-box:hover,
+#box2:hover {
+    transform: scale(1.3); /* Zoom léger au survol */
+}
+
+/* Style de l'image dans le premier encadré */
+#about box1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet de couvrir l'intégralité de l'espace */
+}
+
+/* Style de l'image dans le deuxième encadré */
+#about box2 {
+    position: relative;
+    width: 230px; /* Largeur pour l'image paysage */
+    height: 160px; /* Hauteur plus petite pour le paysage */
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    top: 153px; /* Ajuste la position verticale */
+    left: -187px; /* Décale légèrement à gauche */
+    box-shadow: 4px 4px 4px black; /* Effet d'ombre pour mieux ressortir */
+}
+
+#about box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image couvre tout l'encadré */
+}
+
+
+#about text-container {
+    width: 30%;
+}
+
+/* Style du texte */
+#about text-container h1 {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: -92px ;
+}
+
+
+#about text-container h2 {
+    position: relative;
+    font-size: 10px;
+    color: #555;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: -92px;
+    width: 135%;
+    margin-top: 80px !important;
+    padding-top: 10px; /* Espace entre la ligne et le texte */
+}
+
+#about text-container h2::before {
+    content: "";
+    display: block;
+    width: 70px; /* Longueur de la ligne */
+    height: 2.5px; /* Épaisseur de la ligne */
+    background-color: #c1b086; /* Couleur dorée */
+    position: absolute;
+    top: -10px; /* Distance entre la ligne et le texte */
+    left: 0; /* Aligné au début du texte */
+}
+
+
+#about text-container p {
+    font-size: 10px;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 35px !important;
+    margin-left: -60px !important;
+    width: 135%;
+    text-align: justify; /* Justifier le texte */
+}
+
+#about .p2 {
+    margin-top: 20px  !important; /* Réduit l'espace entre les paragraphes */
+}
+
+#about .home-button {
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 40px; /* Espacement par rapport au texte */
+    margin-left: -60px !important;
+    padding: 15px 30px;
+    background-color: #c1b086; /* Couleur dorée */
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+    border-radius: 20px; /* Bords arrondis */
+    border: 1px solid white; /* Contour blanc très fin */
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5); /* Ombre autour du bouton */
+    transition: background-color 0.3s ease-in-out;
+}
+
+#about .home-button:hover {
+    background-color: #c1b086; /* Légère variation au survol */
+}
+
+
+
+
+
+
