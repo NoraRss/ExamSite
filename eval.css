@@ -98,3 +98,146 @@ header nav a:hover {
     font-weight: bold; /* Assurer que le H n'est pas en gras */
 }
 
+
+
+
+
+
+
+
+
+
+
+/* SECTION ABOUT */
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    color: black;
+}
+
+#image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    height: 60vh;
+}
+
+.image-box {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    top: 46px;
+    left: -80px;
+    box-shadow: 4px 4px 4px black;
+}
+
+.image-box,
+#box2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box:hover,
+#box2:hover {
+    transform: scale(1.3);
+}
+
+#box1 img,
+#box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#box2 {
+    position: relative;
+    width: 230px;
+    height: 160px;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    top: 153px;
+    left: -187px;
+    box-shadow: 4px 4px 4px black;
+}
+
+/* TEXTE ABOUT */
+#text-container {
+    width: 30%;
+    color: black;
+}
+
+#text-container h1 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: -92px;
+}
+
+#text-container h2 {
+    position: relative;
+    font-size: 10px;
+    color: #555;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: -92px;
+    width: 135%;
+    margin-top: 80px !important;
+    padding-top: 10px;
+}
+
+#text-container h2::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 2.5px;
+    background-color: #c1b086;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+#text-container p {
+    font-size: 10px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 35px !important;
+    margin-left: -60px !important;
+    width: 135%;
+}
+
+.p2 {
+    margin-top: 20px !important;
+}
+
+.home-button {
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: -60px !important;
+    padding: 15px 30px;
+    background-color: #c1b086;
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: #a18d65;
+}
