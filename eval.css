@@ -118,7 +118,7 @@ header nav a:hover {
     align-items: center;
     gap: 5px; /* Espacement entre les images */
     padding: 20px;
-    height: 60vh; /* Prend toute la hauteur de la fenêtre */
+    height: 40vh; /* Prend toute la hauteur de la fenêtre */
 }
 
 .amenities-image-box {
