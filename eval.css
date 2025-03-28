@@ -111,29 +111,29 @@ header nav a:hover {
 
 
 /* Conteneur principal qui divise l'écran en deux parties égales */
-#amenities .container {
+.ame-container {
     display: flex;
     flex-direction: column; /* Dispose les éléments en colonne */
-    height: 50vh; /* Utilise toute la hauteur de l'écran */
+    height: 100vh; /* Utilise toute la hauteur de l'écran */
 }
 
 /* Première moitié avec l'image */
-#amenities .image-container {
+.ame-image-container {
     width: 100%; /* L'image occupe toute la largeur */
-    height: 20vh; /* La moitié haute de l'écran */
+    height: 58vh; /* La moitié haute de l'écran */
     overflow: hidden; /* Cache tout ce qui dépasse de l'image */
     border-bottom: 2px solid #c1b086; /* Bordure dorée entre l'image et la partie blanche */
     border-top: 2px solid #c1b086; /* Bordure dorée en haut de l'image */
     position: relative; /* Nécessaire pour positionner l'encadré bleu */
 }
 
-#amenities .image-container img {
+.ame-image-container img {
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
 }
 
-#amenities .blue-box {
+.ame-blue-box {
     position: fixed; /* Position fixe par rapport à la fenêtre */
     top: 63.5%; /* Position verticale au centre */
     left: 67.1%; /* Position horizontale au centre */
@@ -154,12 +154,12 @@ header nav a:hover {
 }
 
 /* Quand on survole, il devient opaque */
-#amenities .blue-box:hover {
+.ame-blue-box:hover {
     opacity: 1;
 }
 
 /* Style pour le texte dans l'encadré */
-#amenities .blue-box h1 {
+.ame-blue-box h1 {
     font-size: 16px; /* Taille du texte */
     color: white; /* Couleur du texte */
     margin: 0; /* Supprime les marges par défaut */
@@ -170,7 +170,7 @@ header nav a:hover {
 }
 
 /* Style pour le texte dans l'encadré */
-#amenities .blue-box p {
+.ame-blue-box p {
     font-size: 10px; /* Taille du texte */
     color: white; /* Couleur du texte */
     margin: 0; /* Supprime les marges par défaut */
@@ -181,7 +181,7 @@ header nav a:hover {
 }
 
 /* Conteneur pour les icônes */
-#amenities .icons-container {
+.ame-icons-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
     gap: 20px;
@@ -191,7 +191,7 @@ header nav a:hover {
 
 
 /* Style pour chaque icône */
-#amenities .icon-item {
+.ame-icon-item {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -199,12 +199,12 @@ header nav a:hover {
 }
 
 
-#amenities .icon-item span {
+.ame-icon-item span {
     font-size: 9px; /* Taille de l'icône */
     color: #fff; /* Couleur de l'icône */
 }
 
-#amenities .icon-item p {
+.ame-icon-item p {
     font-size: 9px;
     color: white; /* Couleur du texte sous les icônes */
     margin: 0;
@@ -212,13 +212,13 @@ header nav a:hover {
 }
 
 /* Deuxième moitié avec fond blanc */
-#amenities .empty-container {
+.ame-empty-container {
     width: 100%;
     height: 50vh; /* La moitié basse de l'écran */
     background-color: white; /* Fond blanc */
 }
 
-#amenities .home-button {
+.ame-home-button {
     position: fixed; /* Fixe le bouton pour qu'il ne bouge pas avec le contenu */
     top: 92.5%; /* Ajuste la hauteur */
     left: 95%; /* Même alignement que .blue-box */
@@ -237,3 +237,14 @@ header nav a:hover {
 
 
 
+/* Cache les éléments par défaut */
+.ame-home-button,
+.ame-blue-box {
+    display: none !important;
+}
+
+/* Affiche uniquement dans la section #Amenities */
+#Amenities .ame-home-button,
+#Amenities .ame-blue-box {
+    display: block !important;
+}
