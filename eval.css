@@ -98,3 +98,365 @@ header nav a:hover {
     font-weight: bold; /* Assurer que le H n'est pas en gras */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles spécifiques à la section Restaurant */
+#Restaurant {
+    margin: 0;
+    padding: 50px;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    overflow-x: hidden;
+}
+
+.rest-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.rest-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    height: 60vh;
+}
+
+.rest-image-box {
+    position: relative;
+    width: 332px;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    box-shadow: 4px 4px 4px black;
+}
+
+.rest-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rest-text-container {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    font-size: 9px;
+}
+
+.rest-text-container h1 {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 405px;
+    width: 100%;
+}
+
+.rest-text-container h1::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 3px;
+    background-color: #c1b086;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    margin-left: 405px;
+    margin-top: 10px;
+}
+
+.rest-text-container p {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+    position: absolute;
+    top: 80px;
+    left: 405px;
+    width: 60%;
+    margin-left: 35px;
+    margin-top: -7px;
+}
+
+.home-button {
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    left: -350px;
+    margin-top: -340px;
+    padding: 15px 30px;
+    background-color: #c1b086;
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 142px;
+}
+
+.rest-overlay {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #c1b086;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(20px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.rest-overlay .rest-name {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(10px);
+    transition: transform 0.5s ease-out;
+}
+
+.rest-overlay.description-overlay {
+    top: 50%;
+    height: 35%;
+}
+
+.rest-overlay .rest-description {
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease-out;
+}
+
+.rest-image-box:hover .rest-overlay {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.rest-image-box:hover .rest-overlay .rest-name,
+.rest-image-box:hover .rest-overlay .rest-description {
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rest-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.rest-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    height: 60vh;
+}
+
+.rest-image-box {
+    position: relative;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px black;
+}
+
+.rest-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box1 {
+    width: 332px;
+    height: 520px;
+    margin-left: 955px;
+}
+
+.box2 {
+    width: 323px;
+    height: 187px;
+    top: -40px;
+    margin-left: 10px;
+}
+.box3 {
+    width: 323px;
+    height: 187px;
+    top: -40px;
+    margin-left: 10px;
+}
+.box4 {
+    width: 323px;
+    height: 187px;
+    margin-top: 330px;
+    right: 670px;
+}
+.box5 {
+    width: 323px;
+    height: 187px;
+    margin-top: 330px;
+    right:660px;
+}
+
+.rest-text-container {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    font-size: 9px;
+}
+
+.rest-text-container h1 {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 405px;
+    width: 100%;
+}
+
+.rest-text-container h1::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 3px;
+    background-color: #c1b086;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    margin-left: 405px;
+    margin-top: 10px;
+}
+
+.rest-text-container p {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.6;
+    position: absolute;
+    top: 80px;
+    left: 405px;
+    width: 60%;
+    margin-left: 35px;
+    margin-top: -7px;
+}
+
+.home-button {
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    left: -350px;
+    margin-top: -340px;
+    padding: 15px 30px;
+    background-color: #c1b086;
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 142px;
+}
+
+.rest-overlay {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #c1b086;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(20px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.rest-overlay .rest-name {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(10px);
+    transition: transform 0.5s ease-out;
+}
+
+.description-overlay {
+    top: 50%;
+    height: 35%;
+}
+
+.description-overlay .rest-description {
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease-out;
+}
+
+.rest-image-box:hover .rest-overlay {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.rest-image-box:hover .rest-overlay .rest-name {
+    transform: translateY(0);
+}
+
+.rest-image-box:hover .description-overlay .rest-description {
+    transform: translateY(0);
+}
