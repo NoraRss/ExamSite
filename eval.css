@@ -107,6 +107,9 @@ header nav a:hover {
 
 
 
+
+
+
 #Rooms #content {
     display: flex;
     flex-direction: row; /* Images à gauche, texte à droite */
@@ -153,7 +156,7 @@ header nav a:hover {
     border: 2px solid #c1b086;
     overflow: hidden;
     top: 80px;
-    left: 118px;
+    margin-left: -60px;
 }
 
 /* Style de l'image dans le deuxième encadré */
@@ -165,7 +168,7 @@ header nav a:hover {
     border: 2px solid #c1b086;
     overflow: hidden;
     top: 80px;
-    left: 133px;
+    left: 600px;
 }
 
 /* Style de l'image dans le troisième encadré */
