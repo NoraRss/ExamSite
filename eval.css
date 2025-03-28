@@ -108,13 +108,12 @@ header nav a:hover {
 
 
 
-
-/* Conteneur principal qui divise l'écran en deux parties égales */
-.ame-container {
+/* Nouveau conteneur principal qui divise l'écran en deux parties égales */
+.ame-main-container {
+    position: relative;
     display: flex;
     flex-direction: column; /* Dispose les éléments en colonne */
     height: 100vh; /* Utilise toute la hauteur de l'écran */
-    position: relative; /* Positionner par rapport à ce conteneur */
 }
 
 /* Première moitié avec l'image */
@@ -133,22 +132,22 @@ header nav a:hover {
     object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
 }
 
+/* Blue Box */
 .ame-blue-box {
-    position: absolute; /* Position fixe par rapport à la fenêtre */
-    top: 103.5%; /* Position verticale au centre */
-    left: 67.1%; /* Position horizontale au centre */
-    transform: translate(-50%, -50%); /* Centrer l'encadré au milieu de la page */
+    position: absolute; /* Positionné par rapport au conteneur parent */
+    top: 63%; /* Centré verticalement */
+    left: 67%; /* Centré horizontalement */
+    transform: translate(-50%, -50%); /* Centrer parfaitement */
     width: 580px; /* Largeur de l'encadré bleu */
     height: 335px; /* Hauteur de l'encadré bleu */
     background-color: #3f9cc1; /* Couleur de l'encadré */
     border: 3px solid #c1b086; /* Bordure dorée */
     border-radius: 15px; /* Coins arrondis */
-    z-index: 20; /* Assure qu'il soit au-dessus de l'image et du fond blanc */
+    z-index: 10; /* Assure qu'il soit au-dessus de l'image et du fond blanc */
     padding: 32px; /* Ajoute de l'espace autour du texte à l'intérieur de l'encadré */
     box-sizing: border-box; /* Assure que le padding ne dépasse pas de l'encadré */
     color: white; /* Couleur du texte dans l'encadré */
     box-shadow: 4px 4px 4px black; /* Effet d'ombre pour mieux ressortir */
-
     transition: opacity 0.3s ease-in-out; /* Animation fluide */
     opacity: 0.4; /* Légèrement transparent */
 }
@@ -209,19 +208,26 @@ header nav a:hover {
     text-align: left;
 }
 
-/* Deuxième moitié avec fond blanc */
+/* Fond blanc */
 .ame-empty-container {
     width: 100%;
     height: 50vh; /* La moitié basse de l'écran */
     background-color: white; /* Fond blanc */
-    z-index: 10; /* Assure que le fond blanc reste derrière l'encadré bleu */
+    z-index: 5; /* Assure que le fond blanc reste derrière l'encadré bleu */
     position: relative; /* Important pour que les éléments absolus à l'intérieur soient positionnés correctement */
 }
 
+#Amenities {
+    position: relative;
+}
+
+
+/* Bouton pour revenir à la page d'accueil */
 .ame-home-button {
-    position: relative; /* Fixe le bouton pour qu'il ne bouge pas avec le contenu */
-    top: 92.5%; /* Ajuste la hauteur */
-    left: 95%; /* Même alignement que .blue-box */
+    position: absolute; /* Fixe le bouton pour qu'il ne bouge pas avec le contenu */
+
+    bottom: 10px; /* Distance depuis le bas */
+    right: 2px; /* Distance depuis la droite */
     transform: translate(-50%, -50%);
     padding: 15px 30px;
     background-color: #c1b086;
@@ -233,5 +239,3 @@ header nav a:hover {
     box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease-in-out;
 }
-
-
