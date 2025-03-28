@@ -242,6 +242,7 @@ header nav a:hover {
     color: black;
     font-family: 'Roboto Slab', serif;
     overflow-x: hidden;
+    height: 100vh; /* Utilise toute la hauteur de l'écran */
 }
 
 .rest-content-container {
@@ -353,8 +354,7 @@ header nav a:hover {
 .rest-home-button {
     font-weight: normal;
     display: inline-block;
-    position: relative;
-   
+    position: relative;  
     margin-top: -400px;
     padding: 15px 30px;
     background-color: #c1b086;
@@ -431,6 +431,7 @@ header nav a:hover {
     justify-content: center; /* Centrer horizontalement le contenu */
     gap: 50px; /* Espacement entre les images et le texte */
     padding: 50px;
+    height: 80vh; /* Utilise toute la hauteur de l'écran */
 }
 
 #Rooms .rooms-image-container {
@@ -550,7 +551,7 @@ header nav a:hover {
 #Rooms .room-home-button {
     font-weight: normal;
     display: inline-block;
-    top: -480px;
+    top: -500px;
     margin-left: 1010px;
     padding: 15px 30px;
     background-color: #c1b086; /* Couleur dorée */
@@ -585,6 +586,7 @@ header nav a:hover {
     justify-content: center; /* Centrer horizontalement */
     gap: 50px; /* Espacement entre images et texte */
     padding: 50px;
+    height: 100vh; /* Utilise toute la hauteur de l'écran */
 }
 
 .about-image-container {
