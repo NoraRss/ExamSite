@@ -107,9 +107,6 @@ header nav a:hover {
 
 
 
-
-
-
 #Rooms #content {
     display: flex;
     flex-direction: row; /* Images à gauche, texte à droite */
@@ -276,3 +273,5 @@ header nav a:hover {
     font-weight: bold;
     color: #333;
 }
+
+
