@@ -5,6 +5,7 @@ body {
     background-size: cover; /* Assure que l'image couvre toute la page */
     height: 100vh;  /* Assure que la hauteur prend toute la fenêtre */
     overflow: hidden; /* Empêche le défilement */
+    font-family: 'Roboto Slab', serif !important; /* Police de caractères par défaut */
 }
 
 header h1 {
@@ -87,7 +88,7 @@ header nav a:hover {
 
 #Home::after {
     content: 'H'; /* Le contenu du pseudo-élément : un grand H */
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif !important;
     font-size: 306px; /* Taille du H */
     color: rgba(255, 255, 255, 0.2); /* Couleur avec un peu de transparence */
     position: absolute;
@@ -103,168 +104,58 @@ header nav a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Rooms #content {
+#Rooms .rooms-content {
     display: flex;
-    flex-direction: row; /* Images à gauche, texte à droite */
-    align-items: center; /* Alignement vertical */
-    justify-content: center; /* Centrer horizontalement */
-    gap: 50px; /* Espacement entre images et texte */
+    flex-direction: row; /* Alignement des images à gauche, texte à droite */
+    align-items: center; /* Alignement vertical des éléments */
+    justify-content: center; /* Centrer horizontalement le contenu */
+    gap: 50px; /* Espacement entre les images et le texte */
     padding: 50px;
 }
 
-#Rooms #image-container {
+#Rooms .rooms-image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espace égal entre les boîtes d'images */
     align-items: center;
     gap: 5px; /* Espacement entre les images */
     padding: 20px;
-    height: 60vh; /* Prend toute la hauteur de la fenêtre */
+    height: 60vh; /* Hauteur des images */
 }
 
-/* Encadré avec coins arrondis et bordure dorée */
-#Rooms .image-box {
+#Rooms .rooms-image-box1,
+#Rooms .rooms-image-box2,
+#Rooms .rooms-image-box3 {
     width: 318px; /* Largeur fixe pour les images */
-    height: 390px; /* Hauteur fixe pour le premier box (portrait) */
-    overflow: hidden;
-    border-radius: 15px;
+    height: 390px; /* Hauteur fixe pour chaque boîte */
+    overflow: hidden; /* Cacher tout ce qui dépasse de la boîte */
+    border-radius: 15px; /* Coins arrondis */
     border: 2px solid #c1b086; /* Bordure dorée */
-    top: 80px; /* Ajuste la position verticale */
+    position: relative;
+    left:50px;
+    top:50px;
 }
 
-/* Style de l'image dans l'encadré */
-#Rooms .image-box img {
+/* Style des images dans chaque boîte */
+#Rooms .rooms-image-box1 img,
+#Rooms .rooms-image-box2 img,
+#Rooms .rooms-image-box3 img {
     width: 100%;
     height: 82%;
-    object-fit: cover; /* Permet de couvrir l'intégralité de l'espace */
+    object-fit: cover; /* Couvre tout l'espace de la boîte */
 }
 
-/* Style de l'image dans le premier encadré */
-#Rooms #box1 {
- 
-    width: 318px;
-    height: 390px;
-    border-radius: 15px;
-    border: 2px solid #c1b086;
-    overflow: hidden;
-    top: 80px !important;
-    margin-left: 600px;
-}
-
-/* Style de l'image dans le deuxième encadré */
-#Rooms #box2 {
-
-    width: 318px;
-    height: 390px;
-    border-radius: 15px;
-    border: 2px solid #c1b086;
-    overflow: hidden;
-    top: 80px;
-    left: 300px;
-}
-
-/* Style de l'image dans le troisième encadré */
-#Rooms #box3 {
-
-    width: 318px;
-    height: 390px;
-    border-radius: 15px;
-    border: 2px solid #c1b086;
-    overflow: hidden;
-    top: 80px;
-    left: 500px;
-}
-
-/* Style du texte */
-#Rooms #text-container {
-    width: 30%;
-}
-
-/* Style du texte */
-#Rooms #text-container h1 {
-    font-size: 20px;
-    color: black;
-    font-weight: normal;
-    line-height: 1.6;
-    text-align: left;
-    margin-left: 55px;
-}
-
-#Rooms #text-container h2 {
-    position: relative;
-    font-size: 9px;
-    color: #555;
-    font-weight: normal;
-    line-height: 1.6;
-    text-align: left;
-    margin-left: 55px;
-    width: 135%;
-    margin-top: 10px !important;
-    padding-top: 10px; /* Espace entre la ligne et le texte */
-    text-align: justify; /* Justifier le texte */
-}
-
-#Rooms #text-container h2::before {
-    content: "";
-    display: block;
-    width: 60px; /* Longueur de la ligne */
-    height: 2.5px; /* Épaisseur de la ligne */
-    background-color: #c1b086; /* Couleur dorée */
-    position: absolute;
-    top: -8px; /* Distance entre la ligne et le texte */
-    left: 0; /* Aligné au début du texte */
-}
-
-#Rooms #text-container {
-    position: absolute;
-    top: 20px;
-    left: 70px;
-    width: auto;
-}
-
-#Rooms .home-button {
-    font-weight: normal;
-    display: inline-block;
-    margin-top: -340px;
-    margin-right: 142px !important;
-    padding: 15px 30px;
-    background-color: #c1b086; /* Couleur dorée */
-    color: white;
-    text-decoration: none;
-    font-size: 7px;
-    border-radius: 20px; /* Bords arrondis */
-    border: 1px solid white; /* Contour blanc très fin */
-    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.5); /* Ombre autour du bouton */
-    transition: background-color 0.3s ease-in-out;
-}
-
-#Rooms .home-button:hover {
-    background-color: #c1b086; /* Légère variation au survol */
-}
-
+/* Texte sous chaque image (nom et prix) */
 #Rooms .room-info {
     width: 100%;
-    padding-top: -0.6px;
     padding-left: 16px;
     box-sizing: border-box;
     margin-top: -4px;
+    font-family: 'Roboto Slab', serif !important;    
 }
 
-/* Style pour les titres des chambres */
+/* Titres sous les images */
 #Rooms .room-info h3 {
-    font-size: 12px;
+    font-size: 13px;
     color: #333;
 }
 
@@ -274,7 +165,7 @@ header nav a:hover {
     color: #888;
 }
 
-/* Style pour le prix en gros */
+/* Prix en gros */
 #Rooms .room-info .price {
     font-size: 15px;
     font-weight: bold;
@@ -284,7 +175,77 @@ header nav a:hover {
 
 
 
+/* Assurez-vous que le conteneur 'rooms-text-container' n'affecte que la page Rooms */
+#Rooms .rooms-text-container {
+    width: 100%;  
+    position: relative; /* Enlever toute position absolue ici */
+    font-family: 'Roboto Slab', serif !important;
+}
+
+#Rooms .rooms-text-container h1 {
+    font-size: 20px;
+    position: absolute; 
+    color: black;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+   
+    left: -995px;
+    top: -230px;
+    width: 200%;
+    font-family: 'Roboto Slab', serif !important;
+}
+
+#Rooms .rooms-text-container h2 {
+    font-size: 9px;
+    color: #555;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    width: 200%;
+    padding-top: 5px;
+    text-align: justify;
+    top: -250px;
+    
+    left: -995px;
+    position: absolute;
+    font-family: 'Roboto Slab', serif !important;
+}
+
+/* Ligne avant le texte */
+#Rooms .rooms-text-container h2::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2.5px;
+    background-color: #c1b086;
+    position: absolute;
+    top: -15px;  
+    left:0;
+}
 
 
 
+/* Bouton de retour à la page d'accueil */
+#Rooms .room-home-button {
+    font-weight: normal;
+    display: inline-block;
+    top: -480px;
+    margin-left: 1010px;
+    padding: 15px 30px;
+    background-color: #c1b086; /* Couleur dorée */
+    color: white;
+    text-decoration: none;
+    font-size: 8px;
+    border-radius: 20px; /* Bords arrondis */
+    border: 1px solid white; /* Contour blanc très fin */
+    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.5); /* Ombre autour du bouton */
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
 
+}
+
+/* Effet au survol du bouton */
+#Rooms .room-home-button:hover {
+    background-color: #c1b086; /* Légère variation au survol */
+}
