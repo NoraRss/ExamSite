@@ -135,7 +135,7 @@ header nav a:hover {
 /* Blue Box */
 .ame-blue-box {
     position: absolute; /* Positionné par rapport au conteneur parent */
-    top: 63%; /* Centré verticalement */
+    top: 60%; /* Centré verticalement */
     left: 67%; /* Centré horizontalement */
     transform: translate(-50%, -50%); /* Centrer parfaitement */
     width: 580px; /* Largeur de l'encadré bleu */
