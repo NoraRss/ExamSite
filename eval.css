@@ -98,3 +98,178 @@ header nav a:hover {
     font-weight: bold; /* Assurer que le H n'est pas en gras */
 }
 
+
+
+
+
+
+
+
+
+
+#Rooms #content {
+    display: flex;
+    flex-direction: row; /* Images à gauche, texte à droite */
+    align-items: center; /* Alignement vertical */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 50px; /* Espacement entre images et texte */
+    padding: 50px;
+}
+
+#Rooms #image-container {
+    position: relative; /* Permet le positionnement absolu des enfants */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacement entre les images */
+    padding: 20px;
+    height: 60vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+/* Encadré avec coins arrondis et bordure dorée */
+#Rooms .image-box {
+    position: relative;
+    width: 318px; /* Largeur fixe pour les images */
+    height: 390px; /* Hauteur fixe pour le premier box (portrait) */
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #c1b086; /* Bordure dorée */
+    top: 80px; /* Ajuste la position verticale */
+}
+
+/* Style de l'image dans l'encadré */
+#Rooms .image-box img {
+    width: 100%;
+    height: 82%;
+    object-fit: cover; /* Permet de couvrir l'intégralité de l'espace */
+}
+
+/* Style de l'image dans le premier encadré */
+#Rooms #box1 {
+    position: relative;
+    width: 318px;
+    height: 390px;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    top: 80px;
+    left: 118px;
+}
+
+/* Style de l'image dans le deuxième encadré */
+#Rooms #box2 {
+    position: relative;
+    width: 318px;
+    height: 390px;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    top: 80px;
+    left: 133px;
+}
+
+/* Style de l'image dans le troisième encadré */
+#Rooms #box3 {
+    position: relative;
+    width: 318px;
+    height: 390px;
+    border-radius: 15px;
+    border: 2px solid #c1b086;
+    overflow: hidden;
+    top: 80px;
+    left: 148px;
+}
+
+/* Style du texte */
+#Rooms #text-container {
+    width: 30%;
+}
+
+/* Style du texte */
+#Rooms #text-container h1 {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 55px;
+}
+
+#Rooms #text-container h2 {
+    position: relative;
+    font-size: 9px;
+    color: #555;
+    font-weight: normal;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 55px;
+    width: 135%;
+    margin-top: 10px !important;
+    padding-top: 10px; /* Espace entre la ligne et le texte */
+    text-align: justify; /* Justifier le texte */
+}
+
+#Rooms #text-container h2::before {
+    content: "";
+    display: block;
+    width: 60px; /* Longueur de la ligne */
+    height: 2.5px; /* Épaisseur de la ligne */
+    background-color: #c1b086; /* Couleur dorée */
+    position: absolute;
+    top: -8px; /* Distance entre la ligne et le texte */
+    left: 0; /* Aligné au début du texte */
+}
+
+#Rooms #text-container {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    width: auto;
+}
+
+#Rooms .home-button {
+    font-weight: normal;
+    display: inline-block;
+    margin-top: -340px;
+    margin-right: 142px !important;
+    padding: 15px 30px;
+    background-color: #c1b086; /* Couleur dorée */
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+    border-radius: 20px; /* Bords arrondis */
+    border: 1px solid white; /* Contour blanc très fin */
+    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.5); /* Ombre autour du bouton */
+    transition: background-color 0.3s ease-in-out;
+}
+
+#Rooms .home-button:hover {
+    background-color: #c1b086; /* Légère variation au survol */
+}
+
+#Rooms .room-info {
+    width: 100%;
+    padding-top: -0.6px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    margin-top: -4px;
+}
+
+/* Style pour les titres des chambres */
+#Rooms .room-info h3 {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Style pour le prix */
+#Rooms .room-info p {
+    font-size: 9px;
+    color: #888;
+}
+
+/* Style pour le prix en gros */
+#Rooms .room-info .price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
