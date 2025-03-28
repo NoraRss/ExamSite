@@ -102,122 +102,127 @@ header nav a:hover {
 
 
 
-#amenities {
+
+
+
+
+
+
+
+
+/* Conteneur principal qui divise l'écran en deux parties égales */
+#amenities .container {
     display: flex;
-    flex-direction: row; /* Images à gauche, texte à droite */
-    align-items: center; /* Alignement vertical */
-    justify-content: center; /* Centrer horizontalement */
-    gap: 50px; /* Espacement entre images et texte */
-    padding: 50px;
+    flex-direction: column; /* Dispose les éléments en colonne */
+    height: 50vh; /* Utilise toute la hauteur de l'écran */
 }
 
-.amenities-image-container {
-    position: relative;
+/* Première moitié avec l'image */
+#amenities .image-container {
+    width: 100%; /* L'image occupe toute la largeur */
+    height: 20vh; /* La moitié haute de l'écran */
+    overflow: hidden; /* Cache tout ce qui dépasse de l'image */
+    border-bottom: 2px solid #c1b086; /* Bordure dorée entre l'image et la partie blanche */
+    border-top: 2px solid #c1b086; /* Bordure dorée en haut de l'image */
+    position: relative; /* Nécessaire pour positionner l'encadré bleu */
+}
+
+#amenities .image-container img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
+}
+
+#amenities .blue-box {
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    top: 63.5%; /* Position verticale au centre */
+    left: 67.1%; /* Position horizontale au centre */
+    transform: translate(-50%, -50%); /* Centrer l'encadré au milieu de la page */
+    width: 580px; /* Largeur de l'encadré bleu */
+    height: 335px; /* Hauteur de l'encadré bleu */
+    background-color: #3f9cc1; /* Couleur de l'encadré */
+    border: 3px solid #c1b086; /* Bordure dorée */
+    border-radius: 15px; /* Coins arrondis */
+    z-index: 10; /* Assure qu'il soit au-dessus de l'image et du fond blanc */
+    padding: 32px; /* Ajoute de l'espace autour du texte à l'intérieur de l'encadré */
+    box-sizing: border-box; /* Assure que le padding ne dépasse pas de l'encadré */
+    color: white; /* Couleur du texte dans l'encadré */
+    box-shadow: 4px 4px 4px black; /* Effet d'ombre pour mieux ressortir */
+
+    transition: opacity 0.3s ease-in-out; /* Animation fluide */
+    opacity: 0.4; /* Légèrement transparent */
+}
+
+/* Quand on survole, il devient opaque */
+#amenities .blue-box:hover {
+    opacity: 1;
+}
+
+/* Style pour le texte dans l'encadré */
+#amenities .blue-box h1 {
+    font-size: 16px; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal; /* Texte en gras */
+    margin: 0 0 20px 0; /* Ajout de l'espace sous le titre */
+    margin-top: 1px; /* Espace entre la bordure de l'encadré et le titre */
+}
+
+/* Style pour le texte dans l'encadré */
+#amenities .blue-box p {
+    font-size: 10px; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    margin: 0; /* Supprime les marges par défaut */
+    font-weight: normal; /* Texte en gras */
+    font-family: 'Roboto Slab', serif;
+    line-height: 2; /* Espacement entre les lignes */
+    text-align: justify; /* Justifier le texte */
+}
+
+/* Conteneur pour les icônes */
+#amenities .icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px;
+    padding: 30px 0;
+    color: white; /* Assure que les icônes sont en couleur blanche sur fond bleu */
+}
+
+
+/* Style pour chaque icône */
+#amenities .icon-item {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5px; /* Espacement entre les images */
-    padding: 20px;
-    height: 40vh; /* Prend toute la hauteur de la fenêtre */
+    justify-content: left;
+    gap: 10px; /* Espace entre l’icône et le texte */
 }
 
-.amenities-image-box {
-    position: relative;
-    width: 220px; /* Largeur fixe pour les images */
-    height: 320px; /* Hauteur fixe pour l'image portrait */
-    overflow: hidden;
-    border-radius: 15px;
-    border: 2px solid #c1b086; /* Bordure dorée */
-    box-shadow: 4px 4px 4px black; /* Effet d'ombre */
-    transition: transform 0.3s ease-in-out;
-    margin-top: -100px;
-    left: -80px;
+
+#amenities .icon-item span {
+    font-size: 9px; /* Taille de l'icône */
+    color: #fff; /* Couleur de l'icône */
 }
 
-.amenities-image-box:hover {
-    transform: scale(1.3); /* Zoom au survol */
+#amenities .icon-item p {
+    font-size: 9px;
+    color: white; /* Couleur du texte sous les icônes */
+    margin: 0;
+    text-align: left;
 }
 
-.amenities-box1 img {
+/* Deuxième moitié avec fond blanc */
+#amenities .empty-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 50vh; /* La moitié basse de l'écran */
+    background-color: white; /* Fond blanc */
 }
 
-.amenities-box2 {
-    position: relative;
-    width: 230px;
-    height: 160px;
-    border-radius: 15px;
-    border: 2px solid #c1b086;
-    overflow: hidden;
-    box-shadow: 4px 4px 4px black;
-    margin-top: 110px;
-    margin-left: -113px;
-}
-
-.amenities-box2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.amenities-text-container {
-    width: 30%;
-}
-
-.amenities-text-container h1 {
-    font-size: 20px;
-    color: black;
-    font-weight: normal;
-    line-height: 1.6;
-    text-align: left;
-    margin-left: -42px;
-    font-family: 'Roboto Slab', serif;
-}
-
-.amenities-text-container h2 {
-    position: relative;
-    font-size: 10px;
-    color: #555;
-    font-weight: normal;
-    line-height: 1.9;
-    text-align: left;
-    width: 135%;
-    margin-left: -42px;
-    margin-top: -45px;
-    padding-top: 1px;
-    font-family: 'Roboto Slab', serif;
-}
-
-.amenities-text-container h2::before {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 2.5px;
-    background-color: #c1b086;
-    position: absolute;
-    left: 0;
-    margin-top: -35px;
-}
-
-.amenities-text-container p {
-    font-size: 10px;
-    color: #555;
-    line-height: 1.6;
-    text-align: left;
-    margin-top: 35px !important;
-    margin-left: -10px;
-    width: 135%;
-    text-align: justify;
-    font-family: 'Roboto Slab', serif;
-}
-
-.amenities-home-button {
-    font-weight: normal;
-    display: inline-block;
-    margin-top: 40px;
-    margin-left: -15px;
+#amenities .home-button {
+    position: fixed; /* Fixe le bouton pour qu'il ne bouge pas avec le contenu */
+    top: 92.5%; /* Ajuste la hauteur */
+    left: 95%; /* Même alignement que .blue-box */
+    transform: translate(-50%, -50%);
     padding: 15px 30px;
     background-color: #c1b086;
     color: white;
@@ -225,10 +230,10 @@ header nav a:hover {
     font-size: 7px;
     border-radius: 20px;
     border: 1px solid white;
-    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease-in-out;
 }
 
-.amenities-home-button:hover {
-    background-color: #a89068;
-}
+
+
+
